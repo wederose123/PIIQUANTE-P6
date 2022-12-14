@@ -44,4 +44,4 @@ Thumbs.db
 
 #____________________________
 back-end/images
-.env
+back-end/.env
