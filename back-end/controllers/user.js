@@ -6,6 +6,7 @@ require('dotenv').config();
 
 
 exports.signup = (req, res, next) => {
+    const uti = process.env.USER;
     bcrypt.hash(req.body.password, 10)
         .then(hash => {
             const user = new User({

@@ -9,9 +9,11 @@ const cors = require('cors');
 
 
 const app = new express();
+require('dotenv').config();
 
 //-----------------mongodb
-mongoose.connect('mongodb+srv://Mickael:mickael1@cluster0.d2vdjqr.mongodb.net/?retryWrites=true&w=majority',
+const mangodb_co = process.env.MANGODB_CO
+mongoose.connect(mangodb_co,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
